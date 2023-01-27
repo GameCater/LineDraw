@@ -1,0 +1,93 @@
+//发布后 此文件可删除不影响使用
+文件说明：
+-----------------------------------------
+GameFIG_Config GameFIG的基本配置类 (不需要用的不用设置他)
+需要优先手动设置这上面的数据
+GameConfig 游戏属性
+GameGGConfig 广告属性
+ServerConfig 服务器接口属性
+GameYun 云开发属性
+player_Config 玩家数据属性
+MusicJson 音乐配置表
+HeadConfig 头像配置表
+shareInfo 分享数据配置表
+BoxInfo 格子广告配置表
+MGOBEConfig 腾讯云小游戏联机引擎配置属性
+
+-----------------------------------------
+GameFIG.WX  平台工具类的主类（微信版）
+集成功能(常用)
+       1:微信登录-注册用户-初始化玩家数据-初始化广告-设置游戏启动参数-检测更新 等流程  ---只需要调用Main_use 即可一套流程走完
+       2:音频管理 播放音频 PlayMusic PlaySound wxZD 音乐 音效 震动的全局管理。
+       3:广告 banner广告 bannerShow(展示banner) GG_all(视频/分享获取奖励)。
+       4:按钮事件模拟 butTween 集成按钮事件 可设置sprite为按钮 模拟 按下 抬起 等事件
+       5:数据管理，SaveMsgToJson(导出json文件) saveLocalData(保存数据到本地) fetchLocalData(读取本地数据) removeLocalData(清除所有数据)
+         WXSaveImage(保存图片到本地相册_仅微信)  WXchooseImage(获取本地图片_仅微信)  UpdatePlayerMsg(保存更新玩家数据)
+       6:弹窗 TiShiKuang(提示框) JiaoHukuang(交互框) WxShowLoading(显示正在登录的圈圈)
+       7:页面跳转管理(单场景有效) InitViewToView(初始化页面跳转) ViewToView(页面跳转)  比如一个场景有多个窗口（主界面-皮肤-设置-商城） 这些页面的切换
+       8:随机管理，GetRandHead(获取随机头像) GetRandName(获取随机名字)  Randshuzhu(打乱数组) GetRandNub(获取随机正整数) GetRandNub2(获取随机数)
+       9:其他集成 Getvoice(文字转语音接口) WXUploadFile(微信数据上传)  
+使用说明：务必在最开始调用Main_use 完成登录等一系列操作。否则部分接口数据未初始化引起错误
+
+-----------------------------------------
+GameFIG.VV  平台工具类的子类（vivo版）
+新增功能：
+        1:九宫格展示 showBoxPortalAd
+        2:添加游戏到桌面 AddDesktop
+
+-----------------------------------------
+GameFIG.TT  平台工具类的子类（字节跳动版）
+新增功能：
+        1:录屏分享功能 viewGetStart(开始录屏)   其他：暂停 停止
+
+使用说明:需要用到录屏分享时候 一定要先录屏再分享 已经集成好了 即使没录屏也不会报错。但是想分享的时候有视频 一定先录屏 结束的时候自动保存路径
+
+-----------------------------------------
+GameFIG_YaoGan 游戏摇杆
+使用说明：通过两个图  大圈圈 小圈圈 模拟摇杆 上下左右360° 返回移动数据 x y 和旋转角度rotation
+        1:需要用摇杆前 InitYaoGan 初始化摇杆 设置好参数
+        2:不用摇杆一定要关闭 免得影响其他按钮点击 需要用再打开  OpenYaoGan CloseYaoGan
+        3:其他页面可以访问 GameFIG_YaoGan的MovePOS和MoveRot来获取移动偏移和移动角度
+
+        使用参考： Main(){
+            this.BigQuan=new Laya.Sprite();//设置一个大圆圈 这里没有设置图片哈
+            this.BigQuan.width=100;//宽高都是100
+            this.BigQuan.height=100;
+            this.BigQuan.pivot(50,50);//设置锚点在中心 半径就是50的圈
+            this.SmallQuan=new Laya.Sprite();//设置一个小圆圈 这里没有设置图片哈
+            this.SmallQuan.width=40;//宽高都是40
+            this.SmallQuan.height=40;
+            this.SmallQuan.pivot(20,20);//设置锚点在中心 半径就是20的圈
+            Laya.stage.addchild(this.BigQuan);//大圆在底部
+            Laya.stage.addchild(this.SmallQuan);//小圆在顶部
+            this.YaoGan=new GameFIG_YaoGan();//new一个摇杆 一个游戏可以多个摇杆
+            var Juli=50-20; //也就是说最远小圆圈可以移动距离大圆圈 30个单位 这里可以自定义距离 我只是这里不让小圆圈跑出去
+            this.YaoGan.InitYaoGan(1,Juli,false,this.BigQuan,this.SmallQuan);
+            Laya.timer.loop(1,this,this.Update);
+        }
+        Update(){
+             console.log("角度:"+ this.YaoGan.MoveRot);
+             if(this.YaoGan.MovePOS.x!=0 !! this.YaoGan.MovePOS.y!=0){
+                if(this.YaoGan.MovePOS.x>0){
+                  console.log("正在往右滑动");
+                }else if(this.YaoGan.MovePOS.x<0){
+                  console.log("正在往左滑动");
+                }
+                if(this.YaoGan.MovePOS.y>0){
+                   console.log("正在往下滑动");
+                }else if(this.YaoGan.MovePOS.y<0){
+                   console.log("正在往上滑动");
+                }
+             }else{
+                console.log("没有在动");
+             }
+        }
+
+-----------------------------------------
+GameFIG_ColorFilter 游戏滤镜
+功能： 颜色滤镜 模糊滤镜 边缘光照滤镜
+-----------------------------------------
+GameFIG_ColorFiter_IDE 游戏滤镜IDE设置版
+使用说明：需要改变某个节点的滤镜就把他挂上去 设置好IDE的属性就行 需要在LayaIDE设置 组件化开发模式
+
+        

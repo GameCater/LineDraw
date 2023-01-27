@@ -1,0 +1,12 @@
+{"file":"turn_font.png","frames":{
+"-":{"x":1,"y":1,"w":18,"h":29,"offX":4,"offY":0,"sourceW":25,"sourceH":29},
+"0":{"x":1,"y":88,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"1":{"x":41,"y":57,"w":7,"h":26,"offX":9,"offY":1,"sourceW":25,"sourceH":29},
+"2":{"x":21,"y":1,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"3":{"x":1,"y":60,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"4":{"x":41,"y":1,"w":17,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"5":{"x":21,"y":29,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"6":{"x":1,"y":32,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"7":{"x":21,"y":85,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"8":{"x":21,"y":57,"w":18,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29},
+"9":{"x":41,"y":29,"w":17,"h":26,"offX":4,"offY":1,"sourceW":25,"sourceH":29}}}
