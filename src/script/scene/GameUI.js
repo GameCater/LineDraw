@@ -56,7 +56,7 @@ export default class GameUI extends GameAll {
         // this.GameFIG.butTween(this.yinshi, Laya.Handler.create(this, () => {
         //     Laya.Scene.open("YinShi.scene", false, [true]);
         // }, [], false), 1, true, "#000000");//游戏隐私
-
+  
         this.GameFIG.butTween(this.GameTishi, Laya.Handler.create(this, () => {
             this.GameFIG.GG_all(true, Laya.Handler.create(this, function () {
                 this.MoveFigerAni();

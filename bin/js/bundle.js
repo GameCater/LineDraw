@@ -1607,8 +1607,11 @@
           }
           but.off(Laya.Event.CLICK, this, this.ButRunFun);
           but.off(Laya.Event.MOUSE_DOWN, this, this.butDownFun);
+          // 按钮音效
           but.on(Laya.Event.MOUSE_DOWN, this, this.butDownFun, [keyMusicID]);
+          // 按钮点击回调
           but.on(Laya.Event.CLICK, this, this.ButRunFun, [FunHander]);
+          // 按钮滤镜
           if (color) {
               but.off(Laya.Event.MOUSE_DOWN, this, this.AddColorBut);
               but.on(Laya.Event.MOUSE_DOWN, this, this.AddColorBut, [but, color]);

@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":43,
-    "selecteID":63,
+    "selectedBox":113,
+    "selecteID":171,
     "searchKey":"Scene",
     "props":{"width":750,"vector1":["","123",0,"",0],"sceneColor":"#000000","runtime":"script/scene/GameUI.js","height":1334},
     "nodeParent":-1,
@@ -208,7 +208,7 @@
                             "props":{"y":286,"x":0,"width":641,"skin":"image/21.png","sizeGrid":"26,29,32,28","pivotY":321,"pivotX":641,"height":641},
                             "nodeParent":9,
                             "label":"Image",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -355,7 +355,7 @@
                             "props":{"y":26,"x":238,"texture":"image/91.png"},
                             "nodeParent":33,
                             "label":"Sprite",
-                            "isOpen":true,
+                            "isOpen":false,
                             "isDirectory":true,
                             "isAniNode":true,
                             "hasChild":true,
@@ -373,7 +373,8 @@
                                     "compId":109,
                                     "child":[
                                         ]
-                                }]
+                                }],
+                            "$HIDDEN":false
                         }]
                 },
                 {
@@ -593,14 +594,13 @@
             "props":{"y":0,"x":0,"width":750,"visible":false,"var":"view_Level","height":1334},
             "nodeParent":2,
             "label":"view_Level",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":43,
             "child":[
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Level_close",
                     "props":{"y":182,"x":83,"width":94,"var":"Level_close","texture":"image/34.png","pivotY":47,"pivotX":47,"height":94},
@@ -614,7 +614,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,level_GK",
                     "props":{"y":164.5,"x":290.5,"var":"level_GK","texture":"image/80.png"},
@@ -628,23 +627,21 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"List",
                     "searchKey":"List,GKlist",
                     "props":{"y":667,"x":375,"width":639,"var":"GKlist","spaceY":92,"spaceX":92,"repeatY":4,"repeatX":4,"pivotY":333,"pivotX":319.5,"height":666},
                     "nodeParent":43,
                     "label":"GKlist",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":58,
                     "child":[
                         {
-                            "x":45,
                             "type":"Image",
                             "searchKey":"Image",
-                            "props":{"y":48,"x":45,"width":90,"skin":"image/36.png","renderType":"render","pivotY":48,"pivotX":45,"height":96},
+                            "props":{"y":48,"x":45,"width":90,"skin":"image/36.png","renderType":"render","pivotY":48,"pivotX":45,"height":96,"disabled":false},
                             "nodeParent":58,
                             "label":"Image",
                             "isOpen":false,
@@ -669,7 +666,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Level_right",
                     "props":{"y":1055,"x":186,"width":45,"visible":false,"var":"Level_right","skin":"image/56.png","pivotY":41,"pivotX":23,"height":82},
@@ -683,7 +679,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Level_left",
                     "props":{"y":1055,"x":564,"width":45,"var":"Level_left","skin":"image/55.png","pivotY":41,"pivotX":23,"height":82},
@@ -697,7 +692,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite",
                     "props":{"y":1055,"x":375,"width":201,"visible":false,"texture":"image/77.png","pivotY":28,"pivotX":101,"height":55},
@@ -710,10 +704,9 @@
                     "compId":63,
                     "child":[
                         {
-                            "x":45,
                             "type":"FontClip",
                             "searchKey":"FontClip,Level_Ye",
-                            "props":{"y":28,"x":104,"width":109,"var":"Level_Ye","skin":"font/f4.png","sheet":"0123456789/","pivotY":11,"pivotX":55,"height":22,"align":"center"},
+                            "props":{"y":28,"x":104,"width":109,"visible":true,"var":"Level_Ye","skin":"font/f4.png","sheet":"0123456789/","pivotY":11,"pivotX":55,"height":22,"align":"center"},
                             "nodeParent":63,
                             "label":"Level_Ye",
                             "isDirectory":false,
@@ -733,13 +726,14 @@
             "props":{"y":0,"x":0,"width":750,"visible":false,"var":"view_Game","height":1334},
             "nodeParent":2,
             "label":"view_Game",
-            "isOpen":false,
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":64,
             "child":[
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Game_Mc2",
                     "props":{"y":182,"x":83,"width":94,"var":"Game_Mc2","texture":"image/45.png","pivotY":47,"pivotX":47,"height":94},
@@ -753,6 +747,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Game_Reture",
                     "props":{"y":182,"x":656,"width":94,"var":"Game_Reture","skin":"image/34.png","pivotY":47,"pivotX":47,"height":94},
@@ -766,12 +761,13 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Game_Leve_Top",
                     "props":{"y":171,"x":239,"var":"Game_Leve_Top","texture":"image/100.png"},
                     "nodeParent":64,
                     "label":"Game_Leve_Top",
-                    "isOpen":true,
+                    "isOpen":false,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
@@ -792,6 +788,7 @@
                         }]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Game_Reset",
                     "props":{"y":1023,"x":524,"width":264,"var":"Game_Reset","skin":"image/32.png","pivotY":50,"pivotX":132,"height":99},
@@ -805,6 +802,7 @@
                         ]
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,Game_backer",
                     "props":{"y":1023,"x":231,"width":264,"var":"Game_backer","skin":"image/38.png","pivotY":50,"pivotX":132,"height":99,"disabled":true},
@@ -816,21 +814,23 @@
                     "compId":77,
                     "child":[
                         ],
-                    "$HIDDEN":false
+                    "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Game_back",
                     "props":{"y":574,"x":375,"width":720,"var":"Game_back","pivotY":325,"pivotX":360,"height":650},
                     "nodeParent":64,
                     "label":"Game_back",
-                    "isOpen":false,
+                    "isOpen":true,
                     "isDirectory":true,
                     "isAniNode":true,
                     "hasChild":true,
                     "compId":113,
                     "child":[
                         {
+                            "x":45,
                             "type":"List",
                             "searchKey":"List,Game_List",
                             "props":{"width":720,"var":"Game_List","spaceY":20,"spaceX":20,"repeatY":10,"repeatX":11,"height":650},
@@ -843,6 +843,7 @@
                             "compId":114,
                             "child":[
                                 {
+                                    "x":60,
                                     "type":"Sprite",
                                     "searchKey":"Sprite",
                                     "props":{"y":37,"x":32,"width":44,"texture":"editor/edit_selected.png","renderType":"render","pivotY":22,"pivotX":22,"height":44},
@@ -871,6 +872,7 @@
                             "$HIDDEN":false
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,DrawLine",
                             "props":{"y":0,"x":0,"width":720,"var":"DrawLine","height":650,"alpha":0.7},
@@ -882,9 +884,10 @@
                             "compId":164,
                             "child":[
                                 ],
-                            "$HIDDEN":false
+                            "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,DrawMoveLine",
                             "props":{"y":0,"x":0,"width":720,"var":"DrawMoveLine","height":650},
@@ -899,6 +902,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,DrawConteLine",
                             "props":{"y":0,"x":0,"width":720,"var":"DrawConteLine","height":650},
@@ -913,6 +917,7 @@
                             "$HIDDEN":true
                         },
                         {
+                            "x":45,
                             "type":"Sprite",
                             "searchKey":"Sprite,MoveFiger",
                             "props":{"zOrder":2,"y":34,"x":32,"width":109,"visible":false,"var":"MoveFiger","texture":"image/86.png","pivotY":9,"pivotX":11,"height":108},
@@ -925,9 +930,10 @@
                             "child":[
                                 ]
                         }],
-                    "$HIDDEN":true
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Set_OK",
                     "props":{"y":1020,"x":375,"width":185,"visible":false,"var":"Set_OK","texture":"image/but.png","pivotY":33,"pivotX":93,"height":65},
@@ -955,6 +961,7 @@
                     "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Sprite",
                     "searchKey":"Sprite,Set_UI",
                     "props":{"y":1018,"x":-39,"visible":false,"var":"Set_UI","texture":"image/23.png"},
@@ -1361,6 +1368,7 @@
                     "$HIDDEN":true
                 },
                 {
+                    "x":30,
                     "type":"Image",
                     "searchKey":"Image,GameTishi",
                     "props":{"y":307,"x":656,"width":94,"var":"GameTishi","skin":"image/99.png","pivotY":56,"pivotX":47,"height":112},
@@ -1371,7 +1379,8 @@
                     "hasChild":false,
                     "compId":169,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 }],
             "$HIDDEN":true
         },
